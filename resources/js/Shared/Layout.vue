@@ -1,5 +1,5 @@
 <template>
-  <!-- <div>
+  <div>
     <div id="dropdown" />
     <div class="md:flex md:flex-col">
       <div class="md:flex md:flex-col md:h-screen">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
 
   <div class="flex h-screen">
@@ -89,7 +89,7 @@
       <!-- Nav Links -->
 
       <main-menu class="shrink-0 p-5 w-56  overflow-y-auto md:block" />
-      <!-- <nav>
+      <nav>
         <a
           href="#"
           class="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-700"
@@ -126,7 +126,7 @@
         >
           Reports
         </a>
-      </nav> -->
+      </nav>
     </aside>
 
     <!-- Main Content -->

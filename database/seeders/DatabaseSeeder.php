@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Account;
-use App\Models\Contact;
-use App\Models\Organization;
 use App\Models\User;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use App\Models\Account;
+use App\Models\Organization;
+use App\Models\Contact;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -19,9 +19,9 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'account_id' => $account->id,
-            'first_name' => 'John',
+            'first_name' => 'Admin',
             'last_name' => 'Doe',
-            'email' => 'johndoe@example.com',
+            'email' => 'admin@admin.com',
             'password' => 'secret',
             'owner' => true,
         ]);
@@ -36,5 +36,6 @@ class DatabaseSeeder extends Seeder
             ->each(function ($contact) use ($organizations) {
                 $contact->update(['organization_id' => $organizations->random()->id]);
             });
+
     }
 }
