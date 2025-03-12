@@ -14,13 +14,13 @@ class RoleMenuSeeder extends Seeder
      */
     public function run(): void
     {
-        $adminRole = Role::where('name', 'Admin')->first();
+    $adminRole = Role::where('name', 'Admin')->first();
     $userRole = Role::where('name', 'User')->first();
 
-    $dashboard = Menu::where('name', 'Dashboard')->first();
-    $users = Menu::where('name', 'Users')->first();
+    $dashboard = Menu::where('MenuText', 'Dashboard')->first();
+    $users = Menu::where('MenuText', 'Users')->first();
 
-    $adminRole->menus()->attach([$dashboard->id, $users->id]);
+    $adminRole->menus()->attach([$dashboard->MenuId, $users->id]);
     $userRole->menus()->attach([$dashboard->id]);
     }
 }

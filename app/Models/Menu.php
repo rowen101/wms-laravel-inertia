@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
+    protected $table = "app_MenuMaster";
     public function roles()
     {
         return $this->belongsToMany(Role::class, 'role_menu');
@@ -13,11 +14,11 @@ class Menu extends Model
 
     public function parent()
     {
-        return $this->belongsTo(Menu::class, 'parent_menu');
+        return $this->belongsTo(Menu::class, 'ParentMenuID');
     }
 
     public function children()
     {
-        return $this->hasMany(Menu::class, 'parent_menu');
+        return $this->hasMany(Menu::class, 'ParentMenuID');
     }
 }
