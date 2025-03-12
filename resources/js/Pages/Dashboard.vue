@@ -1,0 +1,32 @@
+<script setup>
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import { Head } from '@inertiajs/vue3';
+</script>
+
+<template>
+    <Head title="Dashboard" />
+    <AuthenticatedLayout>
+        <main class="py-5 lg:col-span-5">
+
+        <StatusCard/>
+<NewCustomers/>
+<RecentOrders/>
+    </main>
+    <div class="hidden py-5 lg:col-span-3 lg:block">
+            <!-- Profile info to the side -->
+            <ProfileInfo />
+            <hr class="my-5" />
+            <!-- Reminders to the side -->
+            <Reminders />
+          </div>
+    </AuthenticatedLayout>
+
+</template>
+<script>
+import StatusCard from "../component/StatusCard.vue"
+ import ProfileInfo from '../component/ProfileInfo.vue'
+import Reminders from '../component/Reminders.vue'
+
+    import NewCustomers from '../component/NewCustomers.vue'
+    import RecentOrders from '@/component/RecentOrders.vue'
+</script>

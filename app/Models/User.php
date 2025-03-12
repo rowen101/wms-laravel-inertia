@@ -41,12 +41,10 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            'owner' => 'boolean',
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
     }
-
     public function role()
     {
         return $this->belongsTo(Role::class, 'role');
