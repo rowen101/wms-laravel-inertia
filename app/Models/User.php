@@ -20,7 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'web_password',
+        'password',
         'role'
     ];
 
@@ -30,7 +30,7 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $hidden = [
-        'web_password',
+        'password',
         'remember_token',
     ];
 
@@ -43,7 +43,7 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'web_password' => 'hashed',
+            'password' => 'hashed',
         ];
     }
     public function role()
