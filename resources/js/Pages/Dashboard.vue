@@ -9,8 +9,8 @@ import { Head } from '@inertiajs/vue3';
         <main class="py-5 lg:col-span-5">
 
         <StatusCard/>
-<NewCustomers/>
-<RecentOrders/>
+        <NewCustomers/>
+        <RecentOrders/>
     </main>
     <div class="hidden py-5 lg:col-span-3 lg:block">
             <!-- Profile info to the side -->

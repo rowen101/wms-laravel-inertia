@@ -20,7 +20,7 @@ class RoleMenuSeeder extends Seeder
     $dashboard = Menu::where('MenuText', 'Dashboard')->first();
     $users = Menu::where('MenuText', 'Users')->first();
 
-    $adminRole->menus()->attach([$dashboard->MenuId, $users->id]);
+    $adminRole->menus()->attach([$dashboard->Id, $users->id]);
     $userRole->menus()->attach([$dashboard->id]);
     }
 }

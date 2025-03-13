@@ -77,11 +77,13 @@
 
   <script setup lang="ts">
   import { ref } from "vue";
+  import { router } from '@inertiajs/vue3';
 import MobileMenu from "./MobileMenu.vue"
   import { useColorMode } from '@vueuse/core'
   import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
   import { TransitionScale} from '@morev/vue-transitions';
   import { Icon } from '@iconify/vue';
+import { Link } from "@inertiajs/vue3";
 
   const mode = useColorMode();
   const toggleTheme = () => {
@@ -91,20 +93,15 @@ import MobileMenu from "./MobileMenu.vue"
   // Items that will be displayed in menu
   const profileMenuOptions = [
     { title: "Profile" },
-    { title: "Billing" },
-    { title: "Settings" },
-    { title: "Team members" },
-    { title: "Sales" },
     { divider: true },
     { title: "Logout" },
   ];
   const handleMenuItemClick = (item: { title: string }) => {
   if (item.title === "Logout") {
-
-
+    router.post(route('logout'));
   } else if (item.title === "Profile") {
     // Handle profile navigation or action
-
+    router.visit(route('profile.edit'));
   }
 }
   // Used to open/close menu

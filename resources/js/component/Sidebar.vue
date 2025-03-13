@@ -3,7 +3,7 @@
       <div
         class="flex h-full w-full flex-col gap-5 overflow-y-auto rounded-md border bg-card pb-5 scrollbar-thin scrollbar-thumb-input scrollbar-thumb-rounded-md"
       >
-        <SidebarItem :links="menu" />
+      <Sidebar :menus="menus" />
 
         <div class="mt-auto">
           <SidebarItem :links="bottomMenu" />
@@ -14,6 +14,9 @@
 
 <script setup lang="ts">
 import SidebarItem from "./SidebarItem.vue";
+import { usePage } from '@inertiajs/vue3';
+// Fetch the menus from the backend response
+const { menus } = usePage().props.value;
 import { Icon } from "@iconify/vue"; // Ensure you're using Iconify
 
 const bottomMenu = [
