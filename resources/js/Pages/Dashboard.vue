@@ -23,10 +23,10 @@ import { Head } from '@inertiajs/vue3';
 
 </template>
 <script>
-import StatusCard from "../component/StatusCard.vue"
- import ProfileInfo from '../component/ProfileInfo.vue'
-import Reminders from '../component/Reminders.vue'
+import StatusCard from "@/Components/StatusCard.vue"
+ import ProfileInfo from '@/Components/ProfileInfo.vue'
+import Reminders from '@/Components/Reminders.vue'
 
-    import NewCustomers from '../component/NewCustomers.vue'
-    import RecentOrders from '@/component/RecentOrders.vue'
+    import NewCustomers from '@/Components/NewCustomers.vue'
+    import RecentOrders from '@/Components/RecentOrders.vue'
 </script>
