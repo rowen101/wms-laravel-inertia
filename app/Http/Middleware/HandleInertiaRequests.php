@@ -66,7 +66,7 @@ class HandleInertiaRequests extends Middleware
                             ->map(function ($submenu) {
                                 return [
                                     'title' => $submenu->MenuText,
-                                    'route' => $submenu->route, // Assuming route is stored in the Menu model
+                                    'route' => $submenu->FormName, // Assuming route is stored in the Menu model
                                 ];
                             });
                     });
@@ -90,8 +90,8 @@ class HandleInertiaRequests extends Middleware
                 'user' => $request->user(), // Keep the auth user
             ],
             'menus' => $menus, // Add the menus
-         
-          
+
+
         ];
     }
 }

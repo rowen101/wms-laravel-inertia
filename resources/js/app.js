@@ -1,4 +1,4 @@
-import '../css/tailwind/_base.css';
+import '../css/tailwind.css';
 import './bootstrap';
 
 import { createPinia } from 'pinia'

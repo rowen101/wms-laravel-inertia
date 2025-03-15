@@ -20,7 +20,7 @@
           class="h-7 w-7 object-contain"
         />
         </Link >
-       
+
         <!-- Page title -->
         <Link :href="route('dashboard')" class="text-xl font-bold" >WMS </Link>
       </div>

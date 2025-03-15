@@ -41,7 +41,7 @@
                 <TransitionExpand>
                     <DisclosurePanel class="mx-6 flex flex-col border-l px-3">
                         <template v-for="(i, j) in l.items" :key="j">
-                            <Link :href="i.title" class="rounded-md px-3 py-1.5 text-sm hover:bg-muted">
+                            <Link :href="i.route" class="rounded-md px-3 py-1.5 text-sm hover:bg-muted">
                                 {{ i.title }}
                              </Link>
 

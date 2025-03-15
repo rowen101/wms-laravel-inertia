@@ -1,6 +1,0 @@
-@media print {
-  #table-footer, .base-button{
-    display: none;
-  }
-  #section-main {font-size: 12px;}
-}
